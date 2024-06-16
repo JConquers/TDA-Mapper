@@ -12,7 +12,7 @@ def create_undirected_graph( nodes, edges):
     # Add edges to the graph
     G.add_edges_from(edges)
 
-    print(f'# of c.c: {len(list(nx.connected_components(G)))}')
+    print(f'# of connected components: {len(list(nx.connected_components(G)))}')
     return G
 def get_pos(G, layout):
     pos = {}

@@ -1,13 +1,14 @@
 import clustering as cls
 import display as dsp
-import auxillary.dataStoreRetrieve as dsr
-import auxillary.dummy as dmy
+import myMapper.auxillary.dataStoreRetrieve as dsr
+import myMapper.auxillary.dummy as dmy
 import get_OpenCover as goc
 import filter_functions as ff
 from matplotlib import pyplot as plt
 from matplotlib.colors import Normalize
 from inspect import signature
 import networkx as nx
+import numpy as np
 
 
 class Mapper:
@@ -115,25 +116,25 @@ class Mapper:
 def main():
     print("Mapper")
     # EXAMPLE 1: Noisy circle
-    # dataPts, radius, noise_level, num_points, sizeOfInterval, overlapRatio = dsr.retrieve_data_noisy_circle("source\\noisy_circle.bin")
+    # dataPts, radius, noise_level, num_points, sizeOfInterval, overlapRatio = dsr.retrieve_data_noisy_circle("..\source\\noisy_circle.bin")
     # mymap = Mapper(dataPts, filter=ff.y_extract, get_cov=goc.get_cov_y_extract, get_cov_dataPts=goc.get_cov_y_extract_datapts, is3D=False)
     # mymap.assign_naming('Noisy Circle', 'Mapper Output', 'Vertical projection/Height')
     # mymap.apply_mapper(overlapRatio=overlapRatio, sizeOfInterval=sizeOfInterval, threshold=1)
 
     # EXAMPLE 2: Noisy pair of internally touching cirlces
-    # dataPts, circle1_radius, circle2_radius, num_points, noise_level, sizeOfInterval, overlapRatio = dsr.retrieve_data_noisy_pOITC("source\\noisy_pOITC.bin")
+    # dataPts, circle1_radius, circle2_radius, num_points, noise_level, sizeOfInterval, overlapRatio = dsr.retrieve_data_noisy_pOITC("..\source\\noisy_pOITC.bin")
     # mymap = Mapper(dataPts, filter=ff.y_extract, get_cov=goc.get_cov_y_extract, get_cov_dataPts=goc.get_cov_y_extract_datapts, is3D=False)
     # mymap.assign_naming('Noisy Circle', 'Mapper Output', 'Vertical projection/Height')
     # mymap.apply_mapper(overlapRatio=overlapRatio, sizeOfInterval=sizeOfInterval, threshold=1)
 
     # EXAMPLE 3: Non-overlapping 2 armed spiral
-    # dataPts = np.load('source\ma_spiral.npy')
+    # dataPts = np.load('..\source\ma_spiral.npy')
     # mymap = Mapper(dataPts, filter=ff.y_extract, get_cov=goc.get_cov_y_extract, get_cov_dataPts=goc.get_cov_y_extract_datapts, is3D=False)
     # mymap.assign_naming('2-armed spiral', 'Mapper Output', 'Vertical projection/Height')
     # mymap.apply_mapper(overlapRatio=0.07, sizeOfInterval=2.5, threshold=0.55, layout= nx.spring_layout)
 
     # EXAMPLE 4: Non-overlapping 4 armed spiral
-    # dataPts = np.load('source\our_spiral.npy')
+    # dataPts = np.load('..\source\our_spiral.npy')
     # mymap = Mapper(dataPts, filter=ff.y_extract, get_cov=goc.get_cov_y_extract, get_cov_dataPts=goc.get_cov_y_extract_datapts, is3D=False)
     # mymap.assign_naming('4-armed spiral', 'Mapper Output', 'Vertical projection/Height')
     # mymap.apply_mapper(overlapRatio=0.07, sizeOfInterval=10.5, threshold=0.3, layout=nx.spring_layout)
