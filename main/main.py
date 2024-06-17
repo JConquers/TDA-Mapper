@@ -120,12 +120,20 @@ def main():
     # mymap = Mapper(dataPts, filter=ff.y_extract, get_cov=goc.get_cov_y_extract, get_cov_dataPts=goc.get_cov_y_extract_datapts, is3D=False)
     # mymap.assign_naming('Noisy Circle', 'Mapper Output', 'Vertical projection/Height')
     # mymap.apply_mapper(overlapRatio=overlapRatio, sizeOfInterval=sizeOfInterval, threshold=1)
+    # print(f'Radius: {radius}\n'
+    #       f'length of interval: {sizeOfInterval}\n'
+    #       f'overlap ratio: {overlapRatio}\n'
+    #       f'num of points: {num_points}\n'
+    #       f'noise level (0-1): {noise_level}')
 
     # EXAMPLE 2: Noisy pair of internally touching cirlces
     # dataPts, circle1_radius, circle2_radius, num_points, noise_level, sizeOfInterval, overlapRatio = dsr.retrieve_data_noisy_pOITC("..\source\\noisy_pOITC.bin")
     # mymap = Mapper(dataPts, filter=ff.y_extract, get_cov=goc.get_cov_y_extract, get_cov_dataPts=goc.get_cov_y_extract_datapts, is3D=False)
     # mymap.assign_naming('Noisy Circle', 'Mapper Output', 'Vertical projection/Height')
     # mymap.apply_mapper(overlapRatio=overlapRatio, sizeOfInterval=sizeOfInterval, threshold=1)
+    # print(f'c1 radius: {circle1_radius}, c2 radius: {circle2_radius}\n'
+    #       f'length of interval: {sizeOfInterval}, overlap ratio: {overlapRatio}\n'
+    #       f'num of points: {num_points}, noise level: {noise_level}\n')
 
     # EXAMPLE 3: Non-overlapping 2 armed spiral
     # dataPts = np.load('..\source\ma_spiral.npy')

@@ -33,12 +33,20 @@ One can specify their own dataset and filters.
 
 ## Some Results
 Here are some of the examples tested.
-1. 
+
+1. Noisy circle of radius 2.1, with 1000  points. 
+<p align="center">
+<img src="sample_results/raw_circle.png" width="500px" style="border-radius: 15px;"/>
+</p>
+We apply mapper on it with length of interval as 1, overlap ratio as 0.2.
+
 <p align="center">
 <img src="sample_results/circle.png" width="600px" style="border-radius: 15px;"/>
 </p>
+Similarly, 
 
 2. 
+Applying mapper on a pair of internally touching circles with length of interval: 2.0 and overlap ratio: 0.2
 <p align="center">
 <img src="sample_results/pOITC.png" width="600px" style="border-radius: 15px;"/>
 </p>
@@ -49,16 +57,17 @@ The way we find cover of data points X can be visualized as:
 <img src="sample_results/pOITC_anime.gif" style="border-radius: 20px;" width="800px"/>
 </p>
 
-3.
+3. Following is a 2 armed spiral, not joined at the center. We apply mapper on it with filter function same as earlier i.e. height function. Length of interval: 2.5, overlap ratio: 0.07.
 <p align="center">
 <img src="sample_results/2a_spiral.png" width="600px" style="border-radius: 15px;"/>
 </p>
+The output of Mapper kind of unentangles the 2 arms, revealing 2 connected components. Similarly, for the 4-armed spiral given below,
 
-4.
+4.  Length of interval: 10.5, overlap ratio: 0.07. The output reveals 4 connected components.
 <p align="center">
 <img src="sample_results/4a_spiral.png" width="600px" style="border-radius: 15px;"/>
 </p>
 
 
 ## Note
-Stressing the importance of selecting resolution, it is important to note that the output of Mapper is a multiresolution image. In order to get the correct simplification, the choice of resolution-controlling parameters like the size of the interval and overlap ratio play a major role.
+The output of Mapper is a multiresolution image. In order to get the correct simplification, the choice of resolution-controlling parameters like the size of the interval and overlap ratio play a major role.
