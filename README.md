@@ -1,4 +1,4 @@
-# Mapper-TDAw
+# Mapper-TDA
 ## Background
 
 This is an implementation of the statistical version of 'Mapper' as described in [Topological Methods for the Analysis of High Dimensional Data Sets and 3D Object Recognition](https://www.researchgate.net/publication/221571174_Topological_Methods_for_the_Analysis_of_High_Dimensional_Data_Sets_and_3D_Object_Recognition) by Gurjeet Singh, Facundo Mémoli, and Gunnar Carlsson. 'Mapper' is a technique in Topological Data Analysis (TDA) aimed at reducing higher-dimensional datasets into simpler forms while preserving certain geometrical and topological properties. The topological version refers to a theoretical construction, while the statistical version refers to the point cloud analogue.
